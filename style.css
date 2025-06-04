@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+/* Custom font */
+@font-face {
+  font-family: 'blackdread';
+  src: url('fonts/blackdread/blackdread.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Box model reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #000;
+  color: #ccc;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Typography */
+body {
+  margin: 1rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  animation: fadeInPage 1s ease-in forwards;
+  opacity: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  letter-spacing: 0.10em;
+  color: #ccc;
+  text-transform: uppercase;
+}
+
+.main-style {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: black;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.2rem 0.5rem;
+}
+
+/* Fade-in animation for page load */
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.page-fade {
+  animation: fadeInPage 1s ease-in forwards;
+  opacity: 0;
+}
+
+/* Typewriter Target */
+#type-target {
+  font-family: 'VT323', monospace;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #3fcb20;
+  border: 2px solid #3fcb20;
+  padding: 1.5rem;
+  border-radius: 2px;
+  text-align: left;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+/* Hidden source text */
+.hidden-text {
+  display: none;
+}
+
+/* Skip & Extra Buttons */
+.button-style {
+  margin-top: 1rem;
+  padding: 0.6rem 1.0rem;
+  font-size: 1.3rem;
+  font-family: 'VT323', monospace;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #3fcb20;
+}
+.button-style:hover {
+  background-color: #3fcb20;
+  color: #000;
+}
+
+/* Extra buttons container */
+#extra-buttons {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+  text-align: center;
+}
+#extra-buttons.show {
+  opacity: 1;
+}
+
+/* Footer (if used) */
+.site-footer {
+  background-color: #faf6f0;
+  color: #111;
+  padding: 3rem 2rem 1rem;
+  font-family: serif;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-column h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-column li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: #444;
+}
+.footer-column a {
+  text-decoration: none;
+  color: #333;
+}
+.footer-column a:hover {
+  color: #fff;
+}
+.footer-bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.shop-btn {
+  background: #6e34ff;
+  color: #FAF6F0;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.social-icons img {
+  width: 24px;
+  margin-right: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.social-icons img:hover {
+  filter: none;
+}
+
+.no-style {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.no-style:visited {
+  color: inherit;
+}
+
+.no-style:hover {
+  color: #FF1493; 
+  text-decoration: none;
+}
+
+
+.home-link {
+text-align: center;
+}
+
+
+.cursor {
+  display: inline-block;
+  color: #3fcb20;
+  font-weight: bold;
+  animation: blink 1s steps(1) infinite;
+  font-family: 'VT323', monospace;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+   grid-template-columns: repeat(2, 1fr);  /* Creates two equal columns */
+  gap: 0.4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.gallery-grid img {
+  width: auto;             /* Ensures that images in the same row have equal width */
+  height: 500px;  
+  
+  border-radius: 5px;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}

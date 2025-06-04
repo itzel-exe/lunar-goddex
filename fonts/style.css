@@ -1,0 +1,109 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+    background-color: #000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+   font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: #000;
+}
+
+/* images and videos max out at full width */
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+p {
+  color: red;
+}
+.site-footer {
+  background-color: #faf6f0;
+  color: #111;
+  padding: 3rem 2rem 1rem;
+  font-family: serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column li {
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-column a:hover {
+  color: #FF1493;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.shop-btn {
+  background: #6e34ff;
+  color: #FAF6F0;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.social-icons img {
+  width: 24px;
+  margin-right: 1rem;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-icons img:hover {
+  filter: none;
+}
+
+
