@@ -52,20 +52,19 @@ if (mainPage) {
 }
 
 const mainExit = document.getElementById("exit-page");
+const denialMessage = document.getElementById("denial-message");
 
 if (mainExit) {
   mainExit.addEventListener("click", () => {
     // Either do nothing...
     // or show a message
     alert("You have been denied access.");
-    
     // Optionally disable the button afterward
     mainPage.disabled = true;
-     mainExit.disabled = true;
-    mainPage.innerText = "Not Over 18";
-    mainExit.innerText = "Access Denied";
-    alert("You have been denied access.");
-    mainExit.innerText = "Access Denied";
+    mainExit.disabled = true;
+    mainPage.style.display = "none";
+    mainExit.style.display = "none";
+    typedText.innerText ="Access denied. You are not permitted to view this site.";
   });
 }
 
