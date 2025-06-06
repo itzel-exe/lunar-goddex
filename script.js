@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+
   const source = document.getElementById("type-source").innerText.trim();
   const typedText = document.getElementById("typed-text");
   const skipBtn = document.getElementById("skip-button");
@@ -41,15 +42,34 @@ document.addEventListener("DOMContentLoaded", () => {
     extraButtons.classList.remove("hidden");
     extraButtons.classList.add("show");
 
-
-    
-
   });
-  const mainTerminalBtn = document.getElementById("main-terminal");
 
-mainTerminalBtn.addEventListener("click", () => {
-  window.location.href = "indexhome.html";
-});
+  const mainPage = document.getElementById("main-page");
+if (mainPage) {
+  mainPage.addEventListener("click", () => {
+    window.location.href = "indexmain.html";
+  });
+}
+
+const mainExit = document.getElementById("exit-page");
+
+if (mainExit) {
+  mainExit.addEventListener("click", () => {
+    // Either do nothing...
+    // or show a message
+    alert("You have been denied access.");
+    
+    // Optionally disable the button afterward
+    mainPage.disabled = true;
+     mainExit.disabled = true;
+    mainPage.innerText = "Not Over 18";
+    mainExit.innerText = "Access Denied";
+    alert("You have been denied access.");
+    mainExit.innerText = "Access Denied";
+  });
+}
+
+
 
   typeWriter();
 });
